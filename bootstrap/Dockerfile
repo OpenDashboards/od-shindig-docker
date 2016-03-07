@@ -34,4 +34,4 @@ ENV SHINDIG_PORT 8080
 # Launch the Jetty engine
 #
 
-CMD java -Djava.io.tmpdir=/tmp/jetty -Dshindig.host=$SHINDIG_HOST -Dshindig.port=$SHINDIG_PORT -jar /usr/local/jetty/start.jar
+CMD java -Djava.io.tmpdir=/tmp/jetty -Dshindig.host=$SHINDIG_HOST -Dshindig.port=$SHINDIG_PORT -jar /usr/local/jetty/start.jar jetty.port=$SHINDIG_PORT

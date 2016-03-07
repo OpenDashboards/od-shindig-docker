@@ -1,2 +1,3 @@
-# od-shindig-docker
-Sample bootstrapping recipes for the Apache Shindig server.
+# Shindig Bootstrap
+
+The most basic installation of the Shindig server.

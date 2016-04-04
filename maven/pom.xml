@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.opendashboards.shindig</groupId>
+  <version>1.0.0-SNAPSHOT</version>
+  <artifactId>od-shindig-example</artifactId>
+
+  <name>OpenDashboards - Shindig - Example Maven artifact</name>
+
+  <packaging>war</packaging>
+
+  <!-- ====================================================================== -->
+  <!-- Properties -->
+  <!-- ====================================================================== -->
+  <properties>
+    <shindig.server>2.5.2</shindig.server>
+    <plugin.jetty>9.3.8.v20160314</plugin.jetty>
+  </properties>
+
+  <!--====================================================== -->
+  <!-- Dependencies -->
+  <!--====================================================== -->
+  <dependencies>
+
+    <!-- Shindig server -->
+    <dependency>
+      <groupId>org.apache.shindig</groupId>
+      <artifactId>shindig-server-dependencies</artifactId>
+      <version>${shindig.server}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.shindig</groupId>
+      <artifactId>shindig-server-resources</artifactId>
+      <version>${shindig.server}</version>
+      <type>war</type>
+    </dependency>
+
+  </dependencies>
+
+  <!--====================================================== -->
+  <!-- Build configuration -->
+  <!--====================================================== -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+      </plugin>
+
+      <!-- Jetty plugin -->
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${plugin.jetty}</version>
+      </plugin>
+
+    </plugins>
+
+    <finalName>ROOT</finalName>
+
+  </build>
+
+</project>
